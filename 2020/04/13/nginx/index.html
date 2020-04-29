@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nginx | 变形金刚的秘密基地</title>
+    <meta name="description" content="Nginx作为一款由毛子开发的轻量级服务器，有着便于设置、系统开销小、并发数高等特点。作者由2012年进行开发，2014年开源。
+nginx 常用命令行
+`
+nginx // 启动nginx
+nginx -c /usr/local/nginx-1.16.1/conf/nginx.conf // 带配置文件启动Nginx
+nginx -s reload // 重启n ...">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/blogs/assets/css/0.styles.e8fea278.css" as="style"><link rel="preload" href="/blogs/assets/js/app.02a13dad.js" as="script"><link rel="preload" href="/blogs/assets/js/14.54d3bdf0.js" as="script"><link rel="preload" href="/blogs/assets/js/4.77900f55.js" as="script"><link rel="preload" href="/blogs/assets/js/20.4059831a.js" as="script"><link rel="prefetch" href="/blogs/assets/js/1.ac27439b.js"><link rel="prefetch" href="/blogs/assets/js/10.4ae1910a.js"><link rel="prefetch" href="/blogs/assets/js/11.6ae1829a.js"><link rel="prefetch" href="/blogs/assets/js/12.1e84f3b3.js"><link rel="prefetch" href="/blogs/assets/js/13.413aefc1.js"><link rel="prefetch" href="/blogs/assets/js/15.f0e69f7c.js"><link rel="prefetch" href="/blogs/assets/js/16.40a475bf.js"><link rel="prefetch" href="/blogs/assets/js/17.300e0916.js"><link rel="prefetch" href="/blogs/assets/js/18.96430f10.js"><link rel="prefetch" href="/blogs/assets/js/19.8ba19910.js"><link rel="prefetch" href="/blogs/assets/js/21.6b4ca879.js"><link rel="prefetch" href="/blogs/assets/js/22.2b15f143.js"><link rel="prefetch" href="/blogs/assets/js/23.fa770469.js"><link rel="prefetch" href="/blogs/assets/js/24.ebfb8e02.js"><link rel="prefetch" href="/blogs/assets/js/25.c0427775.js"><link rel="prefetch" href="/blogs/assets/js/5.e6039608.js"><link rel="prefetch" href="/blogs/assets/js/6.f8324cd1.js"><link rel="prefetch" href="/blogs/assets/js/7.dfdc6034.js"><link rel="prefetch" href="/blogs/assets/js/8.ea5d24f1.js"><link rel="prefetch" href="/blogs/assets/js/9.abd88ae5.js"><link rel="prefetch" href="/blogs/assets/js/vuejs-paginate.6c25a223.js">
+    <link rel="stylesheet" href="/blogs/assets/css/0.styles.e8fea278.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><img src="https://cn.vuejs.org/images/logo.png" alt> <a href="/blogs/" class="nav-link home-link">变形金刚的秘密基地 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/blogs/" class="nav-link">我的博客</a> <span></span></li><li class="nav-item"><a href="/blogs/tag/" class="nav-link">标签</a> <span></span></li><li class="nav-item"><a href="/blogs/about/" class="nav-link">关于我</a> <span></span></li><li class="nav-item"><a href="/blogs/Calendar/" class="nav-link">万年历</a> <span></span></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/blogs/" class="nav-link mobile-home-link">变形金刚的秘密基地 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/blogs/" class="nav-link">我的博客</a></li><li class="mobile-nav-item"><a href="/blogs/tag/" class="nav-link">标签</a></li><li class="mobile-nav-item"><a href="/blogs/about/" class="nav-link">关于我</a></li><li class="mobile-nav-item"><a href="/blogs/Calendar/" class="nav-link">万年历</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">Joe</span> <span itemprop="address">   in HangZhou</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2020-4-13">
+      Mon Apr 13 2020
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-647bcdc6><a href="/blogs/tags/心得" data-v-647bcdc6> 心得 </a></li><li class="post-tag" data-v-647bcdc6><a href="/blogs/tags/Nginx" data-v-647bcdc6> Nginx </a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><h1 id="nginx"><a href="#nginx" class="header-anchor">#</a> Nginx</h1> <blockquote><p>Nginx作为一款由毛子开发的轻量级服务器，有着便于设置、系统开销小、并发数高等特点。作者由2012年进行开发，2014年开源。</p></blockquote> <h3 id="nginx-常用命令行"><a href="#nginx-常用命令行" class="header-anchor">#</a> nginx 常用命令行</h3> <div class="language- extra-class"><pre class="language-text"><code>nginx // 启动nginx
+nginx -c /usr/local/nginx-1.16.1/conf/nginx.conf // 带配置文件启动Nginx
+nginx -s reload // 重启nginx
+nginx -s stop // 停止nginx，并不保存相关信息
+nginx -s quit // 停止ngiinx，并保存相关信息
+</code></pre></div><h3 id="nginx的配置文件结构"><a href="#nginx的配置文件结构" class="header-anchor">#</a> nginx的配置文件结构</h3> <ul><li>配置文件地址在Nginx\conf\nginx.conf<div class="language- extra-class"><pre class="language-text"><code>// 全局区域
+#user  nobody; // 配置nginx使用的用户名和组 user 名称 组名称
+worker_processes  1;// 配置工作衍生的线程
+
+#error_log  logs/error.log; // 指定错误日期的存放路径
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+
+#pid        logs/nginx.pid; // 配置nginx启动后主进程的ID
+
+// 事件区域, 指定使用的I/O模型 nginx默认apple模型
+events {
+    worker_connections  1024;
+}
+
+// http区域
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    charset utf-8;
+
+    #log_format  main  '$remote_addr - $remote_user [$time_local] &quot;$request&quot; '
+    #                  '$status $body_bytes_sent &quot;$http_referer&quot; '
+    #                  '&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;';
+
+    #access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    // 对主机的设置
+    server {
+        listen       8090; //主机端口
+        server_name  localhost; //主机名
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  combined;
+
+        location / {
+            root   html;
+            index  index.html index.htm;
+            try_files $uri $uri/ /index.html;
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+       ....
+    }
+    
+    // 一个主机就是一个server对象
+
+}
+
+</code></pre></div></li></ul> <p>整个配置文件分为：全局、event、http三个区域。</p> <h3 id="如何配置日志"><a href="#如何配置日志" class="header-anchor">#</a> 如何配置日志</h3> <div class="language- extra-class"><pre><code>```json
+    http: { 
+        log_format mylogformat '$http_x_forwarded_for - $remote_user $time_local'// 全局的日志格式配置
+        access_log // 表示全局的日志配置
+        
+        server: {
+            log_format // 表示单主机的日志格式配置
+            access_log // 表示单主机的日志配置
+        }
+    }
+```
+</code></pre></div><h3 id="rewrit-url-利用正则重定义url"><a href="#rewrit-url-利用正则重定义url" class="header-anchor">#</a> Rewrit url 利用正则重定义url</h3> <div class="language- extra-class"><pre><code>```
+    ...
+    
+    server {
+        location / {
+            root html;
+            index index.html, index.htm;
+            rewrite ^(.*).htmp$ /rewrite.html;
+        }
+    }
+```
+</code></pre></div><h3 id="nginx-反向代理"><a href="#nginx-反向代理" class="header-anchor">#</a> nginx 反向代理</h3> <blockquote><p>代理通常的意义分为正向代理和反向代理，正向代理是客户端访问中转服务器，再由中转服务器携带数据去访问目的服务器，然后将数据转发给客户端。我们通常说的翻墙就是这种模式(喝茶注意，国宝注意)</p></blockquote> <img src="/blogs/imgs/2020-4-13-nginx-1.jpg" alt="Nginx1" width="500"> <blockquote><p>反向代理是将服务器的数据经由服务器程序转发给客户端，然后再代理客户端的数据转发给服务端，双方都经由中间服务器进行转发来达到互相访问的目的。
+面试说法：代理服务器来接收internet上的连接请求，然后将请求转发给网络上的服务器，并将从该服务器得到的结果返回给internet上请求连接的客户端，此时代理服务器对外将表现为一个服务器
+正向代理代理的是客户端，反向代理代理的是服务端</p></blockquote> <div class="language-json extra-class"><pre class="language-json"><code>server <span class="token punctuation">{</span>
+    ...
+    location / <span class="token punctuation">{</span>
+        prox_pass http<span class="token operator">:</span><span class="token number">192.168</span>.<span class="token number">2.1</span><span class="token operator">:</span><span class="token number">8080</span>; <span class="token comment">// 设置本地代理地址</span>
+        index index.html index.htm;
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>代理的第二种方法</p> <div class="language-json extra-class"><pre class="language-json"><code>
+    <span class="token comment">// 设置服务器别名1</span>
+    upstream myserver<span class="token number">1</span> <span class="token punctuation">{</span>
+        server <span class="token number">88384490.</span>github.io;
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 设置服务器别名2</span>
+    upstream myserver<span class="token number">2</span> <span class="token punctuation">{</span>
+        server <span class="token number">82201230.</span>github.io
+    <span class="token punctuation">}</span>
+
+    server <span class="token punctuation">{</span>
+        ...
+        localtion / <span class="token punctuation">{</span>
+            proxy_pass http<span class="token operator">:</span><span class="token comment">//myserver1</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h3 id="nginx-负载均衡"><a href="#nginx-负载均衡" class="header-anchor">#</a> nginx 负载均衡</h3> <blockquote><p>将多台服务器以对称的方式组成一个服务器集合，每台服务器都具有等价的地位，都可以单独对外提供服务而无需其他服务器的辅助(去中心化)
+nginx的负载均衡算法是以轮循的方式按配置的顺序访问每一台服务器
+一个域名关联着很多台服务器</p></blockquote> <div class="language-json extra-class"><pre class="language-json"><code>
+    <span class="token comment">// 设置服务器别名</span>
+    upstream myserver <span class="token punctuation">{</span>
+        <span class="token comment">// 服务器1</span>
+        server <span class="token number">82201230.</span>github.io
+        <span class="token comment">// 服务器2</span>
+        server <span class="token number">88384490.</span>github.io
+    <span class="token punctuation">}</span>
+
+    server <span class="token punctuation">{</span>
+        ...
+        localtion / <span class="token punctuation">{</span>
+            proxy_pass http<span class="token operator">:</span><span class="token comment">//myserver1</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><p>每次访问时，nginx会循环调用服务器别名中的服务器，达到分担流量的目的</p></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h3 active"><a href="#nginx-常用命令行" title="nginx 常用命令行">nginx 常用命令行</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#nginx的配置文件结构" title="nginx的配置文件结构">nginx的配置文件结构</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#如何配置日志" title="如何配置日志">如何配置日志</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#rewrit-url-利用正则重定义url" title="Rewrit url 利用正则重定义url">Rewrit url 利用正则重定义url</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#nginx-反向代理" title="nginx 反向代理">nginx 反向代理</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#nginx-负载均衡" title="nginx 负载均衡">nginx 负载均衡</a></div></div></div></div> <footer class="footer" data-v-f0201fb2><div class="footer-left-wrap" data-v-f0201fb2><ul class="contact" data-v-f0201fb2><li class="contact-item" data-v-f0201fb2><a href="https://github.com/88384490" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-f0201fb2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-f0201fb2><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-f0201fb2></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-f0201fb2><ul class="copyright" data-v-f0201fb2><li class="copyright-item" data-v-f0201fb2><a href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-f0201fb2>Privacy Policy</a></li><li class="copyright-item" data-v-f0201fb2><a href="/blogs/2020/04/13/nginx/.html" class="nav-link" data-v-f0201fb2>MIT Licensed | Copyright © 2018-present Vue.js</a></li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/blogs/assets/js/app.02a13dad.js" defer></script><script src="/blogs/assets/js/14.54d3bdf0.js" defer></script><script src="/blogs/assets/js/4.77900f55.js" defer></script><script src="/blogs/assets/js/20.4059831a.js" defer></script>
+  </body>
+</html>
